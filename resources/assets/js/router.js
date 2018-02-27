@@ -6,7 +6,9 @@ Vue.use(VueRouter)
 export default new VueRouter({
     mode: 'history',
     routes: [
+        { path: '/',      component: require('./components/Tasks.vue') },
         { path: '/about', component: require('./components/About.vue') },
+        { path: '/login', component: require('./components/Login.vue') },
     ],
     scrollBehavior (to, from, savedPosition) {
         if (savedPosition) {

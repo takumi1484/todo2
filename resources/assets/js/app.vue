@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+        <navbar></navbar>
+
         <div class="container">
             <router-view></router-view>
         </div>
@@ -14,7 +16,10 @@
 
 <script>
     export default {
-        name: "app"
+        name: "app",
+        components: {
+            navbar: require('./components/Navbar.vue'),
+        },
     }
 </script>
 

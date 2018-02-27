@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call('TodosTableSeeder');
+
+        factory(App\Task::class, 50)->create();
     }
 }
