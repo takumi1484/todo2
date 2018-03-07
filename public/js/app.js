@@ -12276,7 +12276,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__router__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_http__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_http_js__ = __webpack_require__(8);
 
 
 
@@ -12287,7 +12287,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     router: __WEBPACK_IMPORTED_MODULE_1__router__["a" /* default */],
     el: '#app',
     created: function created() {
-        __WEBPACK_IMPORTED_MODULE_2__services_http__["a" /* default */].init();
+        __WEBPACK_IMPORTED_MODULE_2__services_http_js__["a" /* default */].init();
     },
 
     render: function render(h) {
@@ -15398,7 +15398,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             // TODO: not to send request when the user is not authenticated
-            __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].get('tasks', function (res) {
+            __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].get('tasks/', function (res) {
                 _this.tasks = res.data;
             });
         },
@@ -15410,7 +15410,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.alertMessage = 'Task name should not be blank.';
                 return false;
             }
-            __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].post('tasks', { name: this.name }, function (res) {
+            __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].post('tasks/', { name: this.name }, function (res) {
                 _this2.tasks[res.data.id] = res.data;
                 _this2.name = '';
                 _this2.showAlert = false;

@@ -52,7 +52,7 @@
         methods: {
             fetchTasks () {
                 // TODO: not to send request when the user is not authenticated
-                http.get('tasks', res => {
+                http.get('tasks/', res => {
                     this.tasks = res.data
                 })
             },
@@ -62,7 +62,7 @@
                     this.alertMessage = 'Task name should not be blank.'
                     return false
                 }
-                http.post('tasks', {name: this.name}, res => {
+                http.post('tasks/', {name: this.name}, res => {
                     this.tasks[res.data.id] = res.data
                     this.name = ''
                     this.showAlert = false

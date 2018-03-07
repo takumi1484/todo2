@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import router from './router'
-import http from './services/http'
+import http from './services/http.js'
 
 require('bootstrap')
 
