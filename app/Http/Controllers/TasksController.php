@@ -15,9 +15,10 @@ class TasksController extends Controller
 
     public function store(Request $request)
     {
-        //return Task::create($request->only('name'))->save()->fresh();
+        //return Task::create($request->only('name'))->save()->fresh();　　失敗した記述
         return Task::create([
             'name' => $request['name'],
+            'user_id' => 1,
         ]);
     }
 
@@ -29,7 +30,7 @@ class TasksController extends Controller
     public function update($id, Request $request)
     {
 //        return Task::find($id)->fill($request->only('is_done'))
-//            ->save()->fresh();
+//            ->save()->fresh();    失敗した記述
         return Task::find($id)->fill([
             'is_done' => $request['is_done'],
         ]);

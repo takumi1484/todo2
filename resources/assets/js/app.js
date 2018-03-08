@@ -2,6 +2,7 @@ import Vue from 'vue'
 import router from './router'
 import http from './services/http.js'
 
+
 require('bootstrap')
 
 const app = new Vue({

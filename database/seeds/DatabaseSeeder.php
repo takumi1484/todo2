@@ -12,10 +12,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+       // Model::unguard();
+       // $this->call('TodosTableSeeder');
+       //factory(App\Task::class, 50)->create();
+       //factoriesを利用した50個のデモデータ挿入
+
+
+
         Model::unguard();
+        $this->call('SamplesTableSeeder');
+        //SamplesTableSeederを利用したデモデータ挿入
 
-        $this->call('TodosTableSeeder');
+        //Model::unguard();
+        //$this->call('UsersTableSeeder');
+        //SamplesTableSeederを利用したデモデータ挿入
 
-        factory(App\Task::class, 50)->create();
     }
 }

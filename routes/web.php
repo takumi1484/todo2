@@ -21,6 +21,10 @@ Route::get('/ip', function () {
     return view('ip.index');
 });
 
+Route::get('/regtest', function () {
+    return view('welcome');
+});
+
 Route::get('/todo', 'TodosController@getIndex');
 
 Auth::routes();
