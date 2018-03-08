@@ -18,7 +18,6 @@ class TasksController extends Controller
         //return Task::create($request->only('name'))->save()->fresh();　　失敗した記述
         return Task::create([
             'name' => $request['name'],
-            'user_id' => 1,
         ]);
     }
 
