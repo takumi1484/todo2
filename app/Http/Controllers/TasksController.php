@@ -9,7 +9,6 @@ class TasksController extends Controller
 {
     public function index()
     {
-
         return Task::take(5)->get()->keyBy('id');
     }
 

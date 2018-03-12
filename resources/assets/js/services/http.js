@@ -28,16 +28,17 @@ export default {
         return this.request('delete', url, data, successCb, errorCb)
     },
 
-    /**
+    /*
      * Init the service.
      */
     init () {
-        axios.defaults.baseURL = '/api'
+
+        axios.defaults.baseURL = '/api';  //httpsでデータ送信するように指定(未修整)
 
         // Intercept the request to make sure the token is injected into the header.
         axios.interceptors.request.use(config => {
-            config.headers['X-CSRF-TOKEN']     = window.Laravel.csrfToken
-            config.headers['X-Requested-With'] = 'XMLHttpRequest'
+            config.headers['X-CSRF-TOKEN']     = window.Laravel.csrfToken;
+            config.headers['X-Requested-With'] = 'XMLHttpRequest';
             return config
         })
     }
