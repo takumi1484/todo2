@@ -9,12 +9,12 @@ class TasksController extends Controller
 {
     public function index()
     {
-        return Task::take(5)->get()->keyBy('id');
+        return Task::take(50)->get()->keyBy('id');
     }
 
     public function store(Request $request)
     {
-        //return Task::create($request->only('name'))->save()->fresh();　　失敗した記述
+        //return Task::create($request->only('name'))->save()->fresh();//失敗した記述
         return Task::create([
             'name' => $request['name'],
         ]);
