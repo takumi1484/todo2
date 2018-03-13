@@ -36,6 +36,10 @@
 </template>
 
 <script>
+
+    var protocol= location.protocol;
+    alert(protocol);
+
     import http from '../services/http'
 
     export default {
