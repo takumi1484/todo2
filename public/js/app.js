@@ -12213,6 +12213,9 @@ window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
 
+var url = location.href;
+alert(url);
+
 /**
  * Responsible for all HTTP requests.
  */
@@ -12259,7 +12262,7 @@ window.axios.defaults.headers.common = {
      */
     init: function init() {
 
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = 'https://127.0.0.1:8000/api'; //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = url + 'api'; //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
 
         // Intercept the request to make sure the token is injected into the header.
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.interceptors.request.use(function (config) {
@@ -29014,7 +29017,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -29096,10 +29099,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
-
-var protocol = location.protocol;
-alert(protocol);
 
 
 
