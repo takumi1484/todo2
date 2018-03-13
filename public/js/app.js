@@ -12213,8 +12213,7 @@ window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
 
-var url = location.href;
-alert(url);
+var url = location.href; //urlの取得
 
 /**
  * Responsible for all HTTP requests.
