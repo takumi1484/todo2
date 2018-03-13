@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
+use Illuminate\Support\Facades\URL;//追加
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -15,7 +17,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        URL::forceScheme('https');//追加
     }
+
 
     /**
      * Register any application services.
@@ -26,4 +30,6 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+
+
 }

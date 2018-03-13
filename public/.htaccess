@@ -20,11 +20,13 @@
     RewriteRule ^ index.php [L]
 
 
-    #httpをhttpsにリダイレクトする
-    RewriteEngine On
-    # Force SSL
-    RewriteCond% {HTTPS}! = On
-    RewriteRule ^ https: //% {HTTP_HOST}% {REQUEST_URI} [L, R = 301]
-    # Remove public folder form URL
-    RewriteRule ^ (. *) $ Public / $ 1 [L]
+#httpをhttpsにリダイレクトする
+#    RewriteEngine On
+#    # Force SSL
+#    RewriteCond% {HTTPS}! = On
+#    RewriteRule ^ https: //% {HTTP_HOST}% {REQUEST_URI} [L, R = 301]
+#    # Remove public folder form URL
+#    RewriteRule ^ (. *) $ Public / $ 1 [L]
+####エラーが出た#########
+
 </IfModule>
