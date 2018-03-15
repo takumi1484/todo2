@@ -4,7 +4,7 @@ window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
 
-let url = location.href;//urlの取得
+let href = location.href;//urlの取得
 
 /**
  * Responsible for all HTTP requests.
@@ -39,7 +39,7 @@ export default {
      */
     init () {
 
-        axios.defaults.baseURL = url + 'api';  //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
+        axios.defaults.baseURL = href + 'api';  //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
 
         // Intercept the request to make sure the token is injected into the header.
         axios.interceptors.request.use(config => {

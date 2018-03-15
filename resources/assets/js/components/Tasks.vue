@@ -1,11 +1,9 @@
 <template>
     <div>
         please <router-link to="/login">Login.</router-link>
-
         <div>
             <strong>Hello, Kazuya!</strong>
             <p>Your tasks here.</p>
-
             <ul v-for="task in tasks">
                 <li v-if="task.is_done">
                     <strike> {{ task.name }} </strike>
@@ -15,10 +13,8 @@
                 </li>
                 <button @click="completeTask(task)" class="btn btn-sm btn-success" v-if="task.is_done">Undo</button>
                 <button @click="completeTask(task)" class="btn btn-sm btn-success" v-else>Done</button>
-
                 <button @click="removeTask(task)" class="btn btn-sm btn-danger">Remove</button>
             </ul>
-
             <div class="form-group">
                 <div class="alert alert-danger" role="alert" v-if="showAlert">
                     {{ alertMessage }}

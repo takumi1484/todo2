@@ -12213,7 +12213,7 @@ window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
 
-var url = location.href; //urlの取得
+var href = location.href; //urlの取得
 
 /**
  * Responsible for all HTTP requests.
@@ -12261,7 +12261,7 @@ var url = location.href; //urlの取得
      */
     init: function init() {
 
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = url + 'api'; //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = href + 'api'; //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
 
         // Intercept the request to make sure the token is injected into the header.
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.interceptors.request.use(function (config) {
@@ -29016,7 +29016,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -29061,10 +29061,6 @@ module.exports = function listToStyles (parentId, list) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_http__ = __webpack_require__(14);
-//
-//
-//
-//
 //
 //
 //
