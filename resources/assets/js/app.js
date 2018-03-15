@@ -1,7 +1,7 @@
 window.axios = require('axios');
 
 window.axios.defaults.headers.common = {
-    'X-Requested-With': 'XMLHttpRequest'
+    'X-Requested-With': 'HTTPS'
 };
 
 import Vue from 'vue'

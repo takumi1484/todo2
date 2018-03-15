@@ -1,7 +1,7 @@
 import axios from 'axios'
 window.axios = require('axios');
 window.axios.defaults.headers.common = {
-    'X-Requested-With': 'XMLHttpRequest'
+    'X-Requested-With': 'HTTPS'
 };
 
 let href = location.href;//urlの取得
@@ -44,7 +44,7 @@ export default {
         // Intercept the request to make sure the token is injected into the header.
         axios.interceptors.request.use(config => {
             config.headers['X-CSRF-TOKEN']     = window.Laravel.csrfToken;
-            config.headers['X-Requested-With'] = 'XMLHttpRequest';
+            config.headers['X-Requested-With'] = 'HTTPS';
             return config
         })
     }
