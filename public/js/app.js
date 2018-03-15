@@ -12214,7 +12214,7 @@ window.axios.defaults.headers.common = {
 };
 
 var href = location.href; //urlの取得
-
+alert(href);
 /**
  * Responsible for all HTTP requests.
  */

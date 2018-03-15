@@ -5,7 +5,7 @@ window.axios.defaults.headers.common = {
 };
 
 let href = location.href;//urlの取得
-
+alert(href);
 /**
  * Responsible for all HTTP requests.
  */
