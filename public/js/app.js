@@ -12215,7 +12215,6 @@ window.axios.defaults.headers.common = {
 
 var href = location.href; //urlの取得
 alert(href);
-alert(__WEBPACK_IMPORTED_MODULE_0_axios___default.a.request);
 /**
  * Responsible for all HTTP requests.
  */
@@ -12267,7 +12266,7 @@ alert(__WEBPACK_IMPORTED_MODULE_0_axios___default.a.request);
         // Intercept the request to make sure the token is injected into the header.
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.interceptors.request.use(function (config) {
             config.headers['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
-            config.headers['X-Requested-With'] = 'XMLHttpsRequest';
+            config.headers['X-Requested-With'] = 'XMLHttpRequest';
             return config;
         });
     }

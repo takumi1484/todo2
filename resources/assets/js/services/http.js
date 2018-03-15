@@ -6,7 +6,6 @@ window.axios.defaults.headers.common = {
 
 let href = location.href;//urlの取得
 alert(href);
-alert(axios.request);
 /**
  * Responsible for all HTTP requests.
  */
@@ -45,7 +44,7 @@ export default {
         // Intercept the request to make sure the token is injected into the header.
         axios.interceptors.request.use(config => {
             config.headers['X-CSRF-TOKEN']     = window.Laravel.csrfToken;
-            config.headers['X-Requested-With'] = 'XMLHttpsRequest';
+            config.headers['X-Requested-With'] = 'XMLHttpRequest';
             return config
         })
     }
