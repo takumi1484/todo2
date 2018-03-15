@@ -14,10 +14,11 @@ class TasksController extends Controller
 
     public function store(Request $request)
     {
-        //return Task::create($request->only('name'))->save()->fresh();//失敗した記述
-        return Task::create([
-            'name' => $request['name'],
-        ]);
+        return Task::create($request->only('name'))->save()->fresh();//失敗した記述
+        
+//        return Task::create([
+//            'name' => $request['name'],
+//        ]);
     }
 
     public function destroy($id)
@@ -27,10 +28,11 @@ class TasksController extends Controller
 
     public function update($id, Request $request)
     {
-//        return Task::find($id)->fill($request->only('is_done'))
-//            ->save()->fresh();    失敗した記述
-        return Task::find($id)->fill([
-            'is_done' => $request['is_done'],
-        ]);
+        return Task::find($id)->fill($request->only('is_done'))
+            ->save()->fresh();    //失敗した記述
+
+//        return Task::find($id)->fill([
+//            'is_done' => $request['is_done'],
+//        ]);
     }
 }

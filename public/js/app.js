@@ -12215,6 +12215,8 @@ window.axios.defaults.headers.common = {
 
 var href = location.href; //urlの取得
 alert(href);
+var hostname = location.hostname;
+alert(hostname);
 
 /**
  * Responsible for all HTTP requests.
