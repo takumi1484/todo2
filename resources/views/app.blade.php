@@ -22,7 +22,7 @@ header('Content-type: application/json; charset=UTF-8;');
 </head>
 <body>
 <div id="app">
-    <example></example>
+
 </div>
 </body>
 

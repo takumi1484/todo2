@@ -12210,11 +12210,12 @@ module.exports = Vue$3;
 
 window.axios = __webpack_require__(5);
 window.axios.defaults.headers.common = {
-    'X-Requested-With': 'HTTPS'
+    'X-Requested-With': 'XMLHttpRequest'
 };
 
 var href = location.href; //urlの取得
 alert(href);
+
 /**
  * Responsible for all HTTP requests.
  */
@@ -12266,7 +12267,7 @@ alert(href);
         // Intercept the request to make sure the token is injected into the header.
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.interceptors.request.use(function (config) {
             config.headers['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
-            config.headers['X-Requested-With'] = 'HTTPS';
+            config.headers['X-Requested-With'] = 'XMLHttpRequest';
             return config;
         });
     }
@@ -25110,7 +25111,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 window.axios = __webpack_require__(5);
 
 window.axios.defaults.headers.common = {
-    'X-Requested-With': 'HTTPS'
+    'X-Requested-With': 'XMLHttpRequest'
 };
 
 
