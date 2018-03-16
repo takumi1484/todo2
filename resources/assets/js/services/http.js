@@ -7,15 +7,13 @@ window.axios.defaults.headers.common = {
 let href = location.href;//urlの取得
 alert(href);
 
-
-
 /**
  * Responsible for all HTTP requests.
  */
 export default {
     request (method, url, data, successCb = null, errorCb = null) {
         axios.request({
-            url,
+            url: href,
             data,
             method: method.toLowerCase()
         }).then(successCb).catch(errorCb)

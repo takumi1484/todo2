@@ -12225,7 +12225,7 @@ alert(href);
         var errorCb = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
 
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.request({
-            url: url,
+            url: href,
             data: data,
             method: method.toLowerCase()
         }).then(successCb).catch(errorCb);
@@ -25131,6 +25131,17 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         return h(__webpack_require__(61));
     }
 }).$mount('#app');
+
+//////////////////////////////////////////////////////////////////////
+//
+//      ES6的には;での区切りはいらない場合がある。
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 19 */
