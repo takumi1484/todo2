@@ -12215,6 +12215,7 @@ window.axios.defaults.headers.common = {
 
 var href = location.href; //urlの取得
 alert(href);
+__WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = href + 'api';
 
 /**
  * Responsible for all HTTP requests.
@@ -12225,7 +12226,7 @@ alert(href);
         var errorCb = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
 
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.request({
-            url: href,
+            url: url,
             data: data,
             method: method.toLowerCase()
         }).then(successCb).catch(errorCb);
