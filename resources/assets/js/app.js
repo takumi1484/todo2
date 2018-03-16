@@ -9,7 +9,7 @@ import router from './router'
 import http from './services/http.js'
 
 
-require('./bootstrap')
+require('./bootstrap');
 
 const app = new Vue({
     router,
@@ -21,4 +21,13 @@ const app = new Vue({
 }).$mount('#app')
 
 
-
+//////////////////////////////////////////////////////////////////////
+//
+//      ES6的には;での区切りはいらない場合がある。
+//
+//
+//
+//
+//
+//
+//
