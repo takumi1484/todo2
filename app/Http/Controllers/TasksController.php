@@ -16,11 +16,11 @@ class TasksController extends Controller
     {
         //return Task::create($request->only('name'))->save()->fresh();//失敗した記述...参考サイトの物をそのまま
 
-//        return Task::create([
-//            'name' => $request['name'],
-//        ]);//一応成功したがherokuでエラー
+        return Task::create([
+            'name' => $request['name'],
+        ]);//一応成功したがherokuでエラー
 
-        return Task::create($request->only('name'));
+        //return Task::create($request->only('name'));
 
 //        $task = new Task;
 //        $task -> name = $request -> name;
@@ -38,10 +38,10 @@ class TasksController extends Controller
 //        return Task::find($id)->fill($request->only('is_done'))
 //            ->save()->fresh();    //失敗した記述...参考サイトの物をそのまま
 
-        return Task::find($id)->fill($request->only('is_done'));
+        //return Task::find($id)->fill($request->only('is_done'));
 
-//        return Task::find($id)->fill([
-//            'is_done' => $request['is_done'],
-//        ]);//一応成功したがherokuでエラー
+        return Task::find($id)->fill([
+            'is_done' => $request['is_done'],
+        ]);//一応成功したがherokuでエラー
     }
 }

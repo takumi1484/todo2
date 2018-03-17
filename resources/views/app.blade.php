@@ -1,7 +1,4 @@
-<?php
-header('Access-control-allow-origin: http://〜');       // 通信を許可する接続元ドメインか*（アスタリスク）を指定
-header('Content-type: application/json; charset=UTF-8;');
-?>
+
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}"><!---->
 <head>
