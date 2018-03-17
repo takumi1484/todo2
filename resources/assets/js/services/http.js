@@ -6,7 +6,7 @@ window.axios.defaults.headers.common = {
 
 let href = location.href;//urlの取得
 alert(href);
-axios.defaults.baseURL = href + 'api';  
+axios.defaults.baseURL = href + 'api';
 
 /**
  * Responsible for all HTTP requests.
