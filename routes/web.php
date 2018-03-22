@@ -34,5 +34,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/{any}', function () {
     return view('app');
-})->where('any', '.*');   //正規表現的規約
+})->where('any', '.*');   //正規表現的規約{any}に入るルートパラメータのフォーマットを指定している。今回は正規表現で全ての文字列を表しているため、ブラウザからどのURLでアクセスしてもapp.blade.phpが表示されるようになる。
 
