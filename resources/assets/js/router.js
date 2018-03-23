@@ -4,7 +4,7 @@ import Vue from 'vue'
 Vue.use(VueRouter)
 
 export default new VueRouter({
-    mode: 'history',
+    //mode: 'history',
     routes: [
         { path: '/',      component: require('./components/Tasks.vue') },
         { path: '/about', component: require('./components/About.vue') },
