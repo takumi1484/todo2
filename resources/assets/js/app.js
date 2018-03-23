@@ -29,5 +29,5 @@ const app = new Vue({
 //
 //
 //
-//
+//mode:historyの削除　へ変更
 //

@@ -20,12 +20,12 @@ class TasksController extends Controller
             'name' => $request['name'],
         ]);//一応成功したがherokuでエラー
 
-        //return Task::create($request->only('name'));
+        //return Task::create($request->only('name'));//これも上と同じ結果
 
 //        $task = new Task;
 //        $task -> name = $request -> name;
 //        $task -> is_done = false;
-//        $task -> save();//うまくできなかった。更新したら反映された。没。
+//        $task -> save();//うまくできなかった。更新したら反映された。没。spaじゃなきゃこれでいい
     }
 
     public function destroy($id)//削除。
