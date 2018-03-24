@@ -10,6 +10,7 @@ import http from './services/http.js'
 
 
 require('./bootstrap');
+window.Vue = require('vue');
 
 const app = new Vue({
     router,
