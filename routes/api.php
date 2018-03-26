@@ -20,3 +20,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['middleware' => 'api'], function () {//おそらくKernel.php内のやつ
     Route::resource('tasks',  'TasksController');//tasks はURI//普通にアドレスだった
 });
+
+//jwtauth用apiルート
+//Route::group(['middleware' => 'api'], function () {
+//    Route::post('authenticate',  'AuthenticateController@authenticate');
+//
+//    Route::group(['middleware' => 'jwt.auth'], function () {
+//        Route::resource('tasks',  'TaskController');
+//        Route::get('me',  'AuthenticateController@getCurrentUser');
+//    });
+//});

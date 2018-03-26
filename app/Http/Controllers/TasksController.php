@@ -10,18 +10,23 @@ class TasksController extends Controller
     public function index()//一覧表示。herokuでできてない
     {
         return Task::take(50)->get()->keyBy('id');
+
+//        $user = \JWTAuth::parseToken()->authenticate();//jwt
+//        return $user->tasks()->get()->keyBy('id');
     }
 
     public function store(Request $request)//store:新規追加。create()でもよさそう
     {
-        //return Task::create($request->only('name'))->save()->fresh();//失敗した記述...参考サイトの物をそのまま
+//        $user = \JWTAuth::parseToken()->authenticate();
+//        return $user->tasks()->create($request->only('name'))->fresh();//jwt
+
 
         return Task::create([
             'name' => $request['name'],
-        ]);//一応成功したがherokuでエラー
+        ]);//一応成功したがherokuでエラー。最有力
 
         //return Task::create($request->only('name'));//これも上と同じ結果
-
+        //return Task::create($request->only('name'))->save()->fresh();//失敗した記述...参考サイトの物をそのまま
 //        $task = new Task;
 //        $task -> name = $request -> name;
 //        $task -> is_done = false;

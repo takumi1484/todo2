@@ -44,6 +44,7 @@
                 name: '',
                 showAlert: false,
                 alertMessage: '',
+                is_done: false,
             }
         },
         methods: {

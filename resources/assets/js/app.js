@@ -17,6 +17,7 @@ const app = new Vue({
     el: '#app',
     created () {
         http.init()
+        // userStore.init()//jwtauth
     },
     render: h => h(require('./app.vue')),
 }).$mount('#app')
