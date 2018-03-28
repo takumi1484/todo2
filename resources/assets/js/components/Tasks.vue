@@ -76,7 +76,7 @@
             removeTask (task) {
                 http.delete('tasks/' + task.id, {}, () => {
                     delete this.tasks[task.id]
-                    this.$forceUpdate()
+                    this.$forceUpdate()//jsの機能？
                 })
             },
         }

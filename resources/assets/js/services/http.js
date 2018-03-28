@@ -41,7 +41,7 @@ export default {
      */
     init () {
 
-        axios.defaults.baseURL = href + 'api';  //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
+        axios.defaults.baseURL = 'https://intense-savannah-76949.herokuapp.com/' + 'api';  //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
 
         // Intercept the request to make sure the token is injected into the header.
         axios.interceptors.request.use(config => {
