@@ -21,9 +21,7 @@ class TasksController extends Controller
 //        return $user->tasks()->create($request->only('name'))->fresh();//jwt
 
 
-        return Task::create([
-            'name' => $request['name'],
-        ]);//一応成功したがherokuでエラー。最有力
+        return Task::create($request->only('name'));
 
         //return Task::create($request->only('name'));//これも上と同じ結果
         //return Task::create($request->only('name'))->save()->fresh();//失敗した記述...参考サイトの物をそのまま
