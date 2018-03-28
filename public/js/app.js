@@ -12216,6 +12216,7 @@ window.axios = __webpack_require__(5);
 window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
+__WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = 'https://intense-savannah-76949.herokuapp.com/' + 'api';
 
 var href = location.href; //urlの取得
 alert(href);
@@ -12267,7 +12268,7 @@ __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = href + 'api';
      */
     init: function init() {
 
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = href + 'api'; //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = 'https://intense-savannah-76949.herokuapp.com/' + 'api'; //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
 
         // Intercept the request to make sure the token is injected into the header.
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.interceptors.request.use(function (config) {
@@ -29181,7 +29182,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].delete('tasks/' + task.id, {}, function () {
                 delete _this4.tasks[task.id];
-                _this4.$forceUpdate();
+                _this4.$forceUpdate(); //jsの機能？
             });
         }
     }

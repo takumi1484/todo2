@@ -3,6 +3,7 @@ window.axios = require('axios');
 window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
+axios.defaults.baseURL = 'https://intense-savannah-76949.herokuapp.com/' + 'api';
 
 let href = location.href;//urlの取得
 alert(href);
