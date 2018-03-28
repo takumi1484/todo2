@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="da5735f2-2fce-42e2-bb2d-ee6a180df62d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/resources/assets/js/app.js" afterPath="$PROJECT_DIR$/resources/assets/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/router.js" afterPath="$PROJECT_DIR$/resources/assets/js/router.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/resources/lang/en/validation.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -61,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/resources/assets/js/router.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+              <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -82,10 +81,10 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
-                <element signature="e#2#23#0" expanded="true" />
+                <element signature="e#120#141#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -448,12 +447,12 @@
       <workItem from="1522078737605" duration="21000" />
       <workItem from="1522167516595" duration="2934000" />
       <workItem from="1522229065497" duration="1790000" />
-      <workItem from="1522253449584" duration="3063000" />
+      <workItem from="1522253449584" duration="3226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230958000" />
+    <option name="totallyTimeSpent" value="231121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="950" y="0" width="980" height="1030" extended-state="0" />
@@ -841,7 +840,7 @@
     <entry file="file://$PROJECT_DIR$/resources/lang/en/validation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -873,7 +872,7 @@
     <entry file="file://$PROJECT_DIR$/resources/assets/js/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
@@ -890,10 +889,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding>
-            <element signature="e#2#23#0" expanded="true" />
+            <element signature="e#120#141#0" expanded="true" />
           </folding>
         </state>
       </provider>
