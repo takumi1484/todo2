@@ -12,10 +12,10 @@
 
     <link rel="stylesheet" href="css/app.css">
 
-    <script>
-        window.Laravel = {};
-        window.Laravel.csrfToken = "{{ csrf_token() }}";
-    </script>
+    {{--<script>--}}
+        {{--window.Laravel = {};--}}
+        {{--window.Laravel.csrfToken = "{{ csrf_token() }}";--}}
+    {{--</script>--}}
 </head>
 <body>
 <div id="app">

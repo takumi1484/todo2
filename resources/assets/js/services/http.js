@@ -6,7 +6,7 @@ window.axios = require('axios');
 axios.defaults.baseURL = 'https://intense-savannah-76949.herokuapp.com/' + 'api';
 
 let href = location.href;//urlの取得
-alert(href);
+alert("変更確認");
 axios.defaults.baseURL = href + 'api';
 
 /**
