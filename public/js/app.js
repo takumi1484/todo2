@@ -25115,7 +25115,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     router: __WEBPACK_IMPORTED_MODULE_1__router__["a" /* default */],
     el: '#app',
     created: function created() {
-        __WEBPACK_IMPORTED_MODULE_2__services_http_js__["a" /* default */].init();
+        // http.init()
         // userStore.init()//jwtauth
     },
 
