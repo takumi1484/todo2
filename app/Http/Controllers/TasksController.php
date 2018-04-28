@@ -9,7 +9,10 @@ class TasksController extends Controller
 {
     public function index()//一覧表示。herokuでできてない
     {
-        return Task::take(5)->get()->keyBy('id');
+//        return Task::take()->get()->keyBy('id');
+//        $items = Task::all();
+//
+        return Task::all()->keyBy('id');
 
 //        $user = \JWTAuth::parseToken()->authenticate();//jwt
 //        return $user->tasks()->get()->keyBy('id');
