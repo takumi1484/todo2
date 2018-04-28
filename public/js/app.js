@@ -29018,7 +29018,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -29108,8 +29108,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             tasks: [],
             name: '',
             showAlert: false,
-            alertMessage: '',
-            is_done: false
+            alertMessage: ''
+            // is_done: false,
         };
     },
 
@@ -29128,7 +29128,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (this.name === '') {
                 this.showAlert = true;
                 this.alertMessage = 'Task name should not be blank.';
-                return false;
+                return false; //以下を実行しない
             }
             __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].post('tasks', { name: this.name }, function (res) {
                 _this2.tasks[res.data.id] = res.data;
@@ -29140,6 +29140,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         completeTask: function completeTask(task) {
             var _this3 = this;
 
+            // http.put('tasks/' + task.id, {is_done: !task.is_done}, res => {
             __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].put('tasks/' + task.id, { is_done: !task.is_done }, function (res) {
                 _this3.tasks[task.id] = res.data;
                 _this3.$forceUpdate();

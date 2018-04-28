@@ -42,12 +42,14 @@ class TasksController extends Controller
     public function update($id, Request $request)//更新:is_doneの変更
     {
 //        return Task::find($id)->fill($request->only('is_done'))
-//            ->save()->fresh();    //失敗した記述...参考サイトの物をそのまま
+//            ->save();    //失敗した記述...更新すると適用されるがその場で変化はしない->vue書き換えれば解決しそう
 
         //return Task::find($id)->fill($request->only('is_done'));
 
         return Task::find($id)->fill([
-            'is_done' => $request['is_done'],
-        ]);//一応成功したがherokuでエラー
+            'is_done' => $request->is_done,
+        ]);//一応成功したがherokuでエラー...なぜかできなくなった
+
+//        return Task::find($id)->
     }
 }

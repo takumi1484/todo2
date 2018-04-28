@@ -44,7 +44,7 @@
                 name: '',
                 showAlert: false,
                 alertMessage: '',
-                is_done: false,
+                // is_done: false,
             }
         },
         methods: {
@@ -58,7 +58,7 @@
                 if (this.name === '') {
                     this.showAlert = true
                     this.alertMessage = 'Task name should not be blank.'
-                    return false
+                    return false//以下を実行しない
                 }
                 http.post('tasks', {name: this.name}, res => {
                     this.tasks[res.data.id] = res.data
@@ -68,6 +68,7 @@
                 })
             },
             completeTask (task) {
+                // http.put('tasks/' + task.id, {is_done: !task.is_done}, res => {
                 http.put('tasks/' + task.id, {is_done: !task.is_done}, res => {
                     this.tasks[task.id] = res.data
                     this.$forceUpdate()
