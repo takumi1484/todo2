@@ -12212,15 +12212,15 @@ module.exports = Cancel;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
-window.axios = __webpack_require__(5);
+// window.axios = require('axios');
 // window.axios.defaults.headers.common = {
 //     'X-Requested-With': 'XMLHttpRequest'
 // };
-__WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = 'https://intense-savannah-76949.herokuapp.com/' + 'api';
+// axios.defaults.baseURL = 'https://intense-savannah-76949.herokuapp.com/' + 'api';
 
-var href = location.href; //urlの取得
-alert("変更確認");
-__WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = href + 'api';
+// let href = location.href;//urlの取得
+// alert("変更確認");
+__WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = '/api';
 
 /**
  * Responsible for all HTTP requests.
@@ -12260,8 +12260,88 @@ __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.baseURL = href + 'api';
         var errorCb = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
         return this.request('delete', url, data, successCb, errorCb);
+    },
+
+
+    /*
+     * Init the service.
+     */
+    init: function init() {
+        //
+        //     axios.defaults.baseURL = 'https://intense-savannah-76949.herokuapp.com/' + 'api';  //httpsでデータ送信するように指定(未修整)---追記：ここはこのままでよさそう
+        //
+        //     // Intercept the request to make sure the token is injected into the header.
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.interceptors.request.use(function (config) {
+            config.headers['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
+            config.headers['X-Requested-With'] = 'XMLHttpRequest';
+            // config.headers['Authorization']    = `Bearer ${localStorage.getItem('jwt-token')}` // jwtauth
+            return config;
+        });
+        //
+        //     // Intercept the response and ...
+        //     axios.interceptors.response.use(response => {
+        //         // ...get the token from the header or response data if exists, and save it.
+        //         const token = response.headers['Authorization'] || response.data['token']
+        //         if (token) {
+        //             localStorage.setItem('jwt-token', token)
+        //         }
+        //
+        //         return response
+        //     }, error => {
+        //         // Also, if we receive a Bad Request / Unauthorized error
+        //         console.log(error)
+        //         return Promise.reject(error)
+        //     })
+        //
+        // }
     }
 });
+//
+// import axios from 'axios'
+//
+// /**
+//  * Responsible for all HTTP requests.
+//  */
+// export default {
+//     request (method, url, data, successCb = null, errorCb = null) {
+//         axios.request({
+//             url,
+//             data,
+//             method: method.toLowerCase()
+//         }).then(successCb).catch(errorCb)
+//     },
+//
+//     get (url, successCb = null, errorCb = null) {
+//         return this.request('get', url, {}, successCb, errorCb)
+//     },
+//
+//     post (url, data, successCb = null, errorCb = null) {
+//         return this.request('post', url, data, successCb, errorCb)
+//     },
+//
+//     put (url, data, successCb = null, errorCb = null) {
+//         return this.request('put', url, data, successCb, errorCb)
+//     },
+//
+//     delete (url, data = {}, successCb = null, errorCb = null) {
+//         return this.request('delete', url, data, successCb, errorCb)
+//     },
+//
+//     /**
+//      * Init the service.
+//      */
+//     init () {
+//         axios.defaults.baseURL = '/api'
+//
+//         // Intercept the request to make sure the token is injected into the header.
+//         axios.interceptors.request.use(config => {
+//             config.headers['X-CSRF-TOKEN']     = window.Laravel.csrfToken
+//             config.headers['X-Requested-With'] = 'XMLHttpRequest'
+//             return config
+//         })
+//     }
+// }
+//
 
 /***/ }),
 /* 15 */
@@ -25115,7 +25195,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     router: __WEBPACK_IMPORTED_MODULE_1__router__["a" /* default */],
     el: '#app',
     created: function created() {
-        // http.init()
+        __WEBPACK_IMPORTED_MODULE_2__services_http_js__["a" /* default */].init();
         // userStore.init()//jwtauth
     },
 
@@ -29018,7 +29098,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -29109,7 +29189,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             name: '',
             showAlert: false,
             alertMessage: ''
-            // is_done: false,
+            // is_done: false,//これかくのここじゃないわ
         };
     },
 
@@ -29135,16 +29215,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this2.name = '';
                 _this2.showAlert = false;
                 _this2.alertMessage = '';
+                // alert(res.data)
             });
         },
         completeTask: function completeTask(task) {
             var _this3 = this;
 
-            // http.put('tasks/' + task.id, {is_done: !task.is_done}, res => {
+            // alert(task.is_done);
+            // alert(typeof(task.is_done));
+            // task.is_done = 1;//テスト用
+
             __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].put('tasks/' + task.id, { is_done: !task.is_done }, function (res) {
                 _this3.tasks[task.id] = res.data;
                 _this3.$forceUpdate();
             });
+
+            // http.put('tasks/' + task.id, {is_done: !task.is_done}, res => {
+            //     this.tasks[task.id] = res.data;
+            //     this.$forceUpdate()
+            // })
         },
         removeTask: function removeTask(task) {
             var _this4 = this;

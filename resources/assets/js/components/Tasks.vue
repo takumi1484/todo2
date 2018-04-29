@@ -44,7 +44,7 @@
                 name: '',
                 showAlert: false,
                 alertMessage: '',
-                // is_done: false,
+                // is_done: false,//これかくのここじゃないわ
             }
         },
         methods: {
@@ -65,14 +65,23 @@
                     this.name = ''
                     this.showAlert = false
                     this.alertMessage = ''
+                    // alert(res.data)
                 })
             },
             completeTask (task) {
-                // http.put('tasks/' + task.id, {is_done: !task.is_done}, res => {
-                http.put('tasks/' + task.id, {is_done: !task.is_done}, res => {
-                    this.tasks[task.id] = res.data
+                // alert(task.is_done);
+                // alert(typeof(task.is_done));
+                // task.is_done = 1;//テスト用
+
+                http.put('tasks/' + task.id, {is_done : !task.is_done}, res => {
+                    this.tasks[task.id] = res.data;
                     this.$forceUpdate()
                 })
+
+                // http.put('tasks/' + task.id, {is_done: !task.is_done}, res => {
+                //     this.tasks[task.id] = res.data;
+                //     this.$forceUpdate()
+                // })
             },
             removeTask (task) {
                 http.delete('tasks/' + task.id, {}, () => {

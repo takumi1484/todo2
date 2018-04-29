@@ -11,12 +11,12 @@ class AddUserIdToTasks extends Migration
      *
      * @return void
      */
-//    public function up()
-//    {
+    public function up()
+    {
 //        Schema::table('tasks', function (Blueprint $table) {
 //            $table->integer('user_id')->references('id')->on('users')->unsigned()->index()->nullable();
 //        });
-//    }
+    }
 
 
     /**
@@ -26,8 +26,8 @@ class AddUserIdToTasks extends Migration
      */
     public function down()
     {
-        Schema::table('tasks', function (Blueprint $table) {
-            $table->dropColumn('user_id');
-        });
+//        Schema::table('tasks', function (Blueprint $table) {
+//            $table->dropColumn('user_id');
+//        });
     }
 }

@@ -16,7 +16,7 @@ const app = new Vue({
     router,
     el: '#app',
     created () {
-        // http.init()
+        http.init()
         // userStore.init()//jwtauth
     },
     render: h => h(require('./app.vue')),

@@ -41,15 +41,30 @@ class TasksController extends Controller
 
     public function update($id, Request $request)//更新:is_doneの変更
     {
-//        return Task::find($id)->fill($request->only('is_done'))
-//            ->save();    //失敗した記述...更新すると適用されるがその場で変化はしない->vue書き換えれば解決しそう
+        //メッセージ部をテスト分に変更するせもっどにしてみる
+//        return Task::find($id)->fill([
+//            'is_done' => $request->is_done,
+//        ])->save();
+
+//        return Task::find($id)->fill($request->only('is_done'));
+
+
+//        return Task::find($id)->fill($request->only('is_done'))->save();
+        //失敗した記述...更新すると適用されるがその場で変化はしない->vue書き換えれば解決しそう
 
         //return Task::find($id)->fill($request->only('is_done'));
 
-        return Task::find($id)->fill([
-            'is_done' => $request->is_done,
-        ]);//一応成功したがherokuでエラー...なぜかできなくなった
+//        return Task::find($id)->fill([
+//            'is_done' => $request->is_done,
+//        ])->save();//一応成功したがherokuでエラー...なぜかできなくなった
 
-//        return Task::find($id)->
+//        $request = ['is_done'];
+
+        $a = Task::find($id)->fill([
+            'is_done' => $request->is_done,
+        ]);
+        $a->save();
+        return $a;
+        //なぜか保存とreturnを同時に記述したらエラーが出るようになった
     }
 }
