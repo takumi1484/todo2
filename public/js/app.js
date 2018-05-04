@@ -25195,7 +25195,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     router: __WEBPACK_IMPORTED_MODULE_1__router__["a" /* default */],
     el: '#app',
     created: function created() {
-        __WEBPACK_IMPORTED_MODULE_2__services_http_js__["a" /* default */].init();
+        // http.init()
         // userStore.init()//jwtauth
     },
 
@@ -29211,6 +29211,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 return false; //以下を実行しない
             }
             __WEBPACK_IMPORTED_MODULE_0__services_http__["a" /* default */].post('tasks', { name: this.name }, function (res) {
+                //このコードだとis_doneの情報がvueからapi(db)に送られてないー＞taskを0にしてから更新して、そのあとに新規タスクを追加するとエラーになる
                 _this2.tasks[res.data.id] = res.data;
                 _this2.name = '';
                 _this2.showAlert = false;
