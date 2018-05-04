@@ -17,9 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => 'api'], function () {//おそらくKernel.php内のやつ
-    Route::resource('tasks',  'TasksController');//tasks はURI//普通にアドレスだった
-});
+//Route::group(['middleware' => 'api'], function () {//おそらくKernel.php内のやつ
+//    Route::resource('tasks',  'TasksController');//tasks はURI//普通にアドレスだった
+//});
 
 
     Route::resource('tasks',  'TasksController');//tasks はURI//普通にアドレスだった

@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/assets/js/components/Tasks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/js/components/Tasks.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,8 +62,8 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="237">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -207,7 +208,6 @@
         <option value="$PROJECT_DIR$/resources/assets/js/components/Login.vue" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/Navbar.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthenticateController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/router.js" />
         <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
@@ -218,6 +218,7 @@
         <option value="$PROJECT_DIR$/app/Task.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/components/Tasks.vue" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
       </list>
     </option>
   </component>
@@ -478,15 +479,15 @@
       <workItem from="1525202065050" duration="7000" />
       <workItem from="1525262635538" duration="2315000" />
       <workItem from="1525417453970" duration="960000" />
-      <workItem from="1525432387963" duration="629000" />
+      <workItem from="1525432387963" duration="757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="291287000" />
+    <option name="totallyTimeSpent" value="291415000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -494,8 +495,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32482994" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23028883" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32482994" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23028883" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -864,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="237">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
