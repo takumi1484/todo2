@@ -21,6 +21,10 @@ Route::group(['middleware' => 'api'], function () {//おそらくKernel.php内�
     Route::resource('tasks',  'TasksController');//tasks はURI//普通にアドレスだった
 });
 
+
+    Route::resource('tasks',  'TasksController');//tasks はURI//普通にアドレスだった
+
+
 //jwtauth用apiルート
 //Route::group(['middleware' => 'api'], function () {
 //    Route::post('authenticate',  'AuthenticateController@authenticate');

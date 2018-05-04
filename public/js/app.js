@@ -29189,7 +29189,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             name: '',
             showAlert: false,
             alertMessage: ''
-            // is_done: false,//これかくのここじゃないわ
+            // is_done: false,//これかくのここじゃない？
         };
     },
 

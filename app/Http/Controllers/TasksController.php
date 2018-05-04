@@ -23,10 +23,11 @@ class TasksController extends Controller
 //        $user = \JWTAuth::parseToken()->authenticate();
 //        return $user->tasks()->create($request->only('name'))->fresh();//jwt
 
+//        $c = Task::create($request->only('name'));
+//        $c->save();
+//        return $c;
 
         return Task::create($request->only('name'));
-
-        //return Task::create($request->only('name'));//これも上と同じ結果
         //return Task::create($request->only('name'))->save()->fresh();//失敗した記述...参考サイトの物をそのまま
 //        $task = new Task;
 //        $task -> name = $request -> name;
@@ -66,5 +67,6 @@ class TasksController extends Controller
         $a->save();
         return $a;
         //なぜか保存とreturnを同時に記述したらエラーが出るようになった
+        //save()をreturnするのは危ないかも
     }
 }

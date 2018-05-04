@@ -44,7 +44,7 @@
                 name: '',
                 showAlert: false,
                 alertMessage: '',
-                // is_done: false,//これかくのここじゃないわ
+                // is_done: false,//これかくのここじゃない？
             }
         },
         methods: {
@@ -60,7 +60,7 @@
                     this.alertMessage = 'Task name should not be blank.'
                     return false//以下を実行しない
                 }
-                http.post('tasks', {name: this.name}, res => {
+                http.post('tasks', {name: this.name}, res => {//このコードだとis_doneの情報がvueからapi(db)に送られてないー＞taskを0にしてから更新して、そのあとに新規タスクを追加するとエラーになる
                     this.tasks[res.data.id] = res.data
                     this.name = ''
                     this.showAlert = false
